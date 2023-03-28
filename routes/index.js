@@ -4,10 +4,10 @@ const indexController = require('../controllers/indexController')
 module.exports = (app)=>{
 
 
-    router.post('/login',indexController.handelLogin);
-    router.post('/register',indexController.handelLogin);
-    router.post('/logout',indexController.handelLogin);
-    router.post('/refresh',indexController.handelLogin);
+    router.post('/login',indexController.handleLogin);
+    router.post('/register',indexController.handelNewUser);
+    router.post('/logout',indexController.handelLogout);//todo
+    router.post('/refresh',indexController.handelRefreshToken);//todo
 
     return router;
 }

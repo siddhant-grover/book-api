@@ -33,7 +33,7 @@ db.Sequelize = Sequelize;
 db.sequelize =sequelize;
 
 db.facilities = require('./facilityModel')(sequelize,DataTypes); //facilities table name
-
+db.users = require('./userModel')(sequelize,DataTypes);
 db.sequelize.sync({force:false})//if force is true when we run appliation we will loose the data 
     .then(()=>{
         console.log('re sync done')
